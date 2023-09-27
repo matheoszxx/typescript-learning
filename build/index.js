@@ -1,19 +1,9 @@
 "use strict";
-//Classes
-/*
-    Data modifers
-    public
-    private
-    protected
- */
-class Character {
-    constructor(name, stregth, skill) {
-        this.stregth = stregth;
-        this.skill = skill;
-    }
-    attack() {
-        console.log(`Attack with ${this.stregth} points`);
-    }
+//Generics
+function concatArray(...itens) {
+    return new Array().concat(...itens);
 }
-const p1 = new Character("Luffy", 10, 98);
-p1.attack();
+const numArray = concatArray([1, 2], [5]);
+const stringArray = concatArray(["goku", "gohan"], ["vegeta"]);
+console.log(numArray);
+console.log(stringArray);
